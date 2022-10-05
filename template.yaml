@@ -41,6 +41,7 @@ Resources:
             Method: post
       Policies:
         - TranslateReadOnly
+      Timeout: 10
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
