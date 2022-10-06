@@ -4,7 +4,10 @@ import pytest
 
 from translate import app
 
-
+# Translate clientをモック化している
+# モック化しなくても適切なcredentialが設定されていればユニットテストも動く
+# モック化の参考: https://qiita.com/mashimaro/items/eaa1c51f75432dc03a44
+# ※ モック化ライブラリmotoは，Translate clientに対応していなかった（2022/10/06時点）
 @pytest.fixture()
 def apigw_event(mocker):
     translate = boto3.client("translate")
